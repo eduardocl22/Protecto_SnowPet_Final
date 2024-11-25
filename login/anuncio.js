@@ -57,7 +57,7 @@ const Item = ({ item, onLike, onAddComment }) => {
   );
 };
 
-const MascotasPerdidasEncontradas = () => {
+const MascotasPerdidasEncontradas = ({ navigation }) => {
   const { data, handleLike, handleAddComment } = useContext(AnunciosContext);
 
   const renderItem = ({ item }) => (
@@ -72,6 +72,24 @@ const MascotasPerdidasEncontradas = () => {
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
+      {/* Barra inferior */}
+      <View style={styles.bottomBar}>
+        <TouchableOpacity
+          style={styles.bottomButton}
+          onPress={() => navigation.navigate('GPS')}
+        >
+          <Icon name="my-location" size={25} color="#fff" />
+          <Text style={styles.bottomButtonText}>GPS</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.bottomButton}
+          onPress={() => navigation.navigate('Consejos')}
+        >
+          <Icon name="pets" size={25} color="#fff" />
+          <Text style={styles.bottomButtonText}>Consejos</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -152,6 +170,25 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
+  },
+  bottomBar: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#007bff',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    height: 60,
+  },
+  bottomButton: {
+    alignItems: 'center',
+  },
+  bottomButtonText: {
+    color: '#fff',
+    fontSize: 12,
+    marginTop: 5,
   },
 });
 
