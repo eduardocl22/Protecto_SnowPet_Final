@@ -231,6 +231,11 @@ const GpsScreen = ({ navigation }) => {
           </View>
         </View>
       </Modal>
+
+      {/*Ícono de GPS*/}
+      <TouchableOpacity style={styles.gpsButton}>
+        <Icon name="my-location" size={30} color="#fff" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -399,6 +404,19 @@ const styles = StyleSheet.create({
   modalButtonText: {
     color: '#fff',
     fontSize: 16,
+  },
+  
+  //Estilos de GPS
+  gpsButton: {
+    position: 'absolute',
+    bottom: 100,
+    right: 20,
+    backgroundColor: '#007bff',
+    padding: 15,
+    borderRadius: 50,
+    elevation: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
