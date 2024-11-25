@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "799619646928",
+    "project_id": "snowpet-f3b04",
+    "storage_bucket": "snowpet-f3b04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799619646928:android:7694b13c5c103a3fe525d5",
+        "android_client_info": {
+          "package_name": "com.snowpet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi4uty_k9hvP1O4OYPR4RY2gvQKq6fIJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
