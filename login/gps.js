@@ -117,16 +117,6 @@ const GpsScreen = ({ navigation }) => {
           <Icon name="announcement" size={25} color="#fff" />
           <Text style={styles.bottomButtonText}>Anuncio</Text>
         </TouchableOpacity>
-
-        {/* Botón de cámara añadido entre Anuncio y Consejos */}
-        <TouchableOpacity
-          style={styles.bottomButton}
-          onPress={() => {}}
-        >
-          <Icon name="camera-alt" size={25} color="#fff" />
-          <Text style={styles.bottomButtonText}>Cámara</Text>
-        </TouchableOpacity>
-
         <TouchableOpacity
           style={styles.bottomButton}
           onPress={() => navigation.navigate('Consejos')}
