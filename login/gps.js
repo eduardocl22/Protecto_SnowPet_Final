@@ -117,6 +117,16 @@ const GpsScreen = ({ navigation }) => {
           <Icon name="announcement" size={25} color="#fff" />
           <Text style={styles.bottomButtonText}>Anuncio</Text>
         </TouchableOpacity>
+
+        {/* Botón de cámara añadido entre Anuncio y Consejos */}
+        <TouchableOpacity
+          style={styles.bottomButton}
+          onPress={() => {}}
+        >
+          <Icon name="camera-alt" size={25} color="#fff" />
+          <Text style={styles.bottomButtonText}>Cámara</Text>
+        </TouchableOpacity>
+
         <TouchableOpacity
           style={styles.bottomButton}
           onPress={() => navigation.navigate('Consejos')}
@@ -221,6 +231,11 @@ const GpsScreen = ({ navigation }) => {
           </View>
         </View>
       </Modal>
+
+      {/*Ícono de GPS*/}
+      <TouchableOpacity style={styles.gpsButton}>
+        <Icon name="my-location" size={30} color="#fff" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -389,6 +404,19 @@ const styles = StyleSheet.create({
   modalButtonText: {
     color: '#fff',
     fontSize: 16,
+  },
+  
+  //Estilos de GPS
+  gpsButton: {
+    position: 'absolute',
+    bottom: 100,
+    right: 20,
+    backgroundColor: '#007bff',
+    padding: 15,
+    borderRadius: 50,
+    elevation: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
